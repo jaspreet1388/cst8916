@@ -31,18 +31,18 @@ Visualization Tools: Power BI, Grafana, or a custom web dashboard.
 Alerts: Sends SMS, emails, or notifications if vitals cross predefined thresholds.
 AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
-**3. System Workflow**
-Data Acquisition: Sensors capture heart rate and SpO2 data.
+**3. System Workflow:**
+**a. Data Acquisition:** Sensors capture heart rate and SpO2 data.
 
-Edge Processing: Microcontroller filters noise and formats data.
+**b. Edge Processing:** Microcontroller filters noise and formats data.
 
-Data Transmission: Securely sent via Bluetooth/Wi-Fi to cloud servers.
+**c. Data Transmission:** Securely sent via Bluetooth/Wi-Fi to cloud servers.
 
-Cloud Analytics: AI algorithms detect irregularities (e.g., arrhythmia, hypoxia).
+**d. Cloud Analytics:** AI algorithms detect irregularities (e.g., arrhythmia, hypoxia).
 
-Real-Time Alerts: Notifications triggered in case of abnormal readings.
+**e. Real-Time Alerts:** Notifications triggered in case of abnormal readings.
 
-Data Visualization: Healthcare professionals and patients monitor trends on dashboards.
+**f. Data Visualization:** Healthcare professionals and patients monitor trends on dashboards.
 
 Long-Term Analysis: Predictive analytics identify risks over time.
 
