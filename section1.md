@@ -411,7 +411,7 @@ query {
     heart_rate
   }
 }
-✅ Response
+Response
 json
 Copy
 Edit
