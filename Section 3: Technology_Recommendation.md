@@ -1,4 +1,4 @@
-**Section 3: Technology Recommendation and Justification**
+#####**Section 3: Technology Recommendation and Justification**
 
 **Recommended Technology Approach**
 Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 and 2, we have come to conclusion that a **hybrid approach combining WebSockets with REST API** is best for  **IoT healthcare monitoring system**.
@@ -8,13 +8,13 @@ Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 a
  
 ---
  
-### **Justification for the Hybrid Approach**
-#### **1. Real-time Data Streaming with WebSockets**
+ **Justification for the Hybrid Approach**
+**1. Real-time Data Streaming with WebSockets**
 - The **primary requirement of IoT healthcare monitoring** is to ensure **continuous and instant updates** from sensors **without delays**.
 - **REST and GraphQL require polling**, which increases **network load and latency**, whereas **WebSockets maintain a persistent, low-latency connection**.
 - **Example:** If a patient’s **oxygen level drops suddenly**, a **WebSocket-based push notification** can alert doctors instantly instead of waiting for the next REST request.
  
-#### **2. Efficient Data Management with REST API**
+**2. Efficient Data Management with REST API**
 - **REST API remains useful for non-real-time operations**, such as:
   - Retrieving **historical sensor data** for analysis.
   - **User authentication and device configurations**.
@@ -28,7 +28,7 @@ Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 a
  
 ---
  
-### **Q2: Why is this Hybrid Approach Best for Performance, Scalability, and Real-time Capabilities?**
+### **Reason why Hybrid Approach Best for Performance, Scalability, and Real-time in IOT healthcare monitoring is best suited **
 | **Factor** | **Why Hybrid Approach Works** |
 |------------|--------------------------------|
 | **Performance** | WebSockets ensure **low-latency real-time updates**, while REST handles **efficient batch data retrieval**. |
