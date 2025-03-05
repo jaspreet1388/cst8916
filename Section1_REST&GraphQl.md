@@ -7,7 +7,6 @@
 **2. System Components**
 
 **a. Wearable Sensors** Heart Rate Sensor (PPG, ECG): Measures beats per minute (BPM). Oxygen Sensor (SpO2, Pulse Oximeter): Measures blood oxygen saturation levels.
-
 These sensors are embedded in smartwatches, fitness bands, or medical-grade devices.
 
 **b. Microcontroller/Edge Device**
