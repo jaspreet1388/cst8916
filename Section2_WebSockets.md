@@ -1,4 +1,4 @@
- 
+Section2 
 WebSockets would significantly enhance the IoT healthcare monitoring system by enabling **bi-directional, low-latency communication** between IoT Edge devices, cloud services, and client applications. Unlike REST and GraphQL, which require repeated polling to retrieve new data, WebSockets allow a persistent connection, ensuring **real-time updates** for critical sensor readings like **oxygen levels and heart rate**.
  
 **Implementation of WebSockets in IoT Healthcare Monitoring**
