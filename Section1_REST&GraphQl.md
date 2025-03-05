@@ -33,7 +33,7 @@ Queries in GraphQL work like **GET requests in REST**, allowing clients to fetch
 |--------------|------------------|
 | **Fetch Sensor Data** (Equivalent to GET in REST) | ```query { getSensorData(id: "1") { oxygen_level heart_rate } }``` |
  
-✔ **Advantage:** Clients receive **only the requested fields**, reducing unnecessary data transfer.  
+**Advantage:** Clients receive **only the requested fields**, reducing unnecessary sensor  data transfer.  
  
 ---
  
@@ -42,10 +42,25 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
  
 | **Operation** | **GraphQL Mutation** |
 |--------------|------------------|
-| **Add New Sensor Data** (Equivalent to POST in REST) | ```mutation { addSensorData(oxygen_level: 95, heart_rate: 78) { id oxygen_level heart_rate } }``` |
-| **Update Sensor Data** (Equivalent to PUT in REST) | ```mutation { updateSensorData(id: "2", oxygen_level: 97) { id oxygen_level heart_rate } }``` |
-| **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id: "2") }``` |
+| **Add New Sensor Data** (Equivalent to POST in REST) | ```mutation { addSensorData(oxygen_level, heart_rate) { id oxygen_level heart_rate } }``` |
+| **Update Sensor Data** (Equivalent to PUT in REST) | ```mutation { updateSensorData(id, oxygen_level) { id oxygen_level heart_rate } }``` |
+| **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id) }``` |
  
-✔ **Advantage:** A **single mutation request** can modify or delete data without needing multiple API calls.  
+**Advantage:** A **single mutation request** can modify or delete information collected from the sensors without needing multiple API calls.  
+
+
+---
+ 
+### ** Which One is Better for IoT Healthcare Monitoring?**  
+ 
+| **Use Case** | **Preferred Method** | **Reason** |
+|-------------|---------------|---------|
+| **Simple IoT Data Retrieval (Heart Rate & Oxygen Levels)** | REST API | Easier to implement, well-supported, efficient for simple data retrieval |
+| **Low Bandwidth IoT Devices (e.g., Wearable Health Trackers)** | GraphQL | Fetch **only required fields**, reducing **network traffic** |
+| **Real-Time Patient Monitoring (ICU, Home Health Devices)** | GraphQL | **Subscriptions** push data **instantly** when new sensor readings are available |
+| **Large-Scale IoT Deployment (Hospitals, Healthcare Networks)** | REST API | More **scalable**, better **caching**, and **efficient batch processing** |
+| **Complex Queries (Multiple Sensor Types, AI/Analytics, Patient Data Aggregation)** | GraphQL | Query **multiple sensor readings** with a **single request** |
+ 
+---
  
 ---
