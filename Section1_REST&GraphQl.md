@@ -88,7 +88,6 @@ Queries in GraphQL work like **GET requests in REST**, allowing clients to fetch
  
 **Advantage:** Clients receive **only the requested fields**, reducing unnecessary sensor  data transfer.  
  
----
  
 ## GraphQL Mutations (Modifying Data)  
 Mutations handle **POST, PUT, and DELETE** operations by modifying data on the server.  
