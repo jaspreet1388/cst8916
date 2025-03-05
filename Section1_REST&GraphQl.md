@@ -25,7 +25,27 @@ REST APIs follow a **resource-based URL structure** with multiple endpoints for 
 
 **GraphQL for Handling Data Operations**
 GraphQL provides a single endpoint (/graphql) that allows clients to request exactly the data they need using queries (for retrieving data) and mutations (for modifying data). Unlike REST, which requires multiple endpoints for different operations, GraphQL enables flexible and batch requests through a single query for the heart rate and oxygen sensor data for the IOT healthcare monitoring system.
-GraphQL Queries (Retrieving Data)
-Queries in GraphQL work like GET requests in REST, allowing clients to fetch specific fields instead of retrieving the full dataset.
-Operation	GraphQL Query
-Fetch Sensor Data (Equivalent to GET in REST)	query { getSensorData(id: "1") { oxygen_level heart_rate } }
+
+## GraphQL Queries (Retrieving Data)  
+Queries in GraphQL work like **GET requests in REST**, allowing clients to fetch **specific fields** instead of retrieving the full dataset.  
+ 
+| **Operation** | **GraphQL Query** |
+|--------------|------------------|
+| **Fetch Sensor Data** (Equivalent to GET in REST) | ```query { getSensorData(id: "1") { oxygen_level heart_rate } }``` |
+ 
+✔ **Advantage:** Clients receive **only the requested fields**, reducing unnecessary data transfer.  
+ 
+---
+ 
+## GraphQL Mutations (Modifying Data)  
+Mutations handle **POST, PUT, and DELETE** operations by modifying data on the server.  
+ 
+| **Operation** | **GraphQL Mutation** |
+|--------------|------------------|
+| **Add New Sensor Data** (Equivalent to POST in REST) | ```mutation { addSensorData(oxygen_level: 95, heart_rate: 78) { id oxygen_level heart_rate } }``` |
+| **Update Sensor Data** (Equivalent to PUT in REST) | ```mutation { updateSensorData(id: "2", oxygen_level: 97) { id oxygen_level heart_rate } }``` |
+| **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id: "2") }``` |
+ 
+✔ **Advantage:** A **single mutation request** can modify or delete data without needing multiple API calls.  
+ 
+---
