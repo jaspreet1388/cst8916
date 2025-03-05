@@ -61,11 +61,11 @@ asyncio.get_event_loop().run_forever()
 This WebSocket server **continuously streams live sensor data** to clients, ensuring real-time updates.
  
 ---
- ### **Q2: How WebSockets Differ from REST and GraphQL in Managing Real-time Data Flow in IoT Healthcare Monitoring**
+**Exploring WebSockets Differ from REST and GraphQL in Managing Real-time Data Flow in IoT Healthcare Monitoring**
  
-Your **IoT healthcare monitoring system** currently uses **REST and GraphQL** for data retrieval and updates. However, both have limitations in **real-time communication**, making **WebSockets a more suitable alternative** for streaming continuous sensor data updates.
+**IoT healthcare monitoring system** while using the **REST and GraphQL** for data retrieval and updates have limitations. However, both the limitations could be handled by using the websockets which provides the **real-time communication**, making **WebSockets a more suitable alternative** for streaming continuous sensor data for frequent updates.
  
-#### **1. REST vs. WebSockets for Real-time IoT Data**
+#### **1. REST vs. WebSockets for Real-time IoT sensor Data**
 | Feature | REST | WebSockets |
 |---------|------|-----------|
 | **Communication Type** | Request-response (stateless) | Persistent, bi-directional |
@@ -74,14 +74,14 @@ Your **IoT healthcare monitoring system** currently uses **REST and GraphQL** fo
 | **Use Case** | Retrieving stored sensor data at intervals | Streaming live sensor data for real-time monitoring |
  
 ##### **Example in IoT Healthcare Monitoring**
-- In your **REST-based setup**, a client fetches oxygen and heart rate data using:  
+- In  **REST-based setup** for the IOT monitoring system, a client fetches oxygen and heart rate data using:  
   ```http
   GET /sensor-data
   ```
   This request has to be repeated periodically to get **new readings**.
 - **WebSockets solve this issue** by **pushing** updates automatically:
   ```python
-  await websocket.send(json.dumps({"oxygen_level": 98, "heart_rate": 72}))
+  await websocket.send(json.dumps({"oxygen_level", "heart_rate"}))
   ```
   This **removes the need for polling**, reducing **API load** and **latency**.
  
@@ -119,4 +119,4 @@ Your **IoT healthcare monitoring system** currently uses **REST and GraphQL** fo
 | **Real-time monitoring of oxygen & heart rate** | WebSockets |
  
 ##### **Final Thought:**
-Your **current REST & GraphQL setup** is great for **data requests and updates**, but **WebSockets should be used for real-time sensor monitoring** to provide **instant updates** on oxygen levels and heart rate.
+Thus we can conclude that,  **WebSockets should be used for real-time sensor monitoring** to provide **instant updates** on oxygen levels and heart rate for the IOT based healthcare monitioring 
