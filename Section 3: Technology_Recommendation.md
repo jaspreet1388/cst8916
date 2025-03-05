@@ -8,7 +8,7 @@ Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 a
  
 ---
  
- **Justification for the Hybrid Approach**
+ ### **Justification for the Hybrid Approach**
 **1. Real-time Data Streaming with WebSockets**
 - The **primary requirement of IoT healthcare monitoring** is to ensure **continuous and instant updates** from sensors **without delays**.
 - **REST and GraphQL require polling**, which increases **network load and latency**, whereas **WebSockets maintain a persistent, low-latency connection**.
