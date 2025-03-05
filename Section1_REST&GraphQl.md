@@ -47,10 +47,13 @@ Data Visualization: Healthcare professionals and patients monitor trends on dash
 Long-Term Analysis: Predictive analytics identify risks over time.
 
 **4. Use Cases**
-Remote Patient Monitoring: Helps doctors track chronic patients remotely.
-Athlete Performance Tracking: Monitors vitals during training sessions.
-Elderly Care: Alerts caregivers in case of abnormal vitals.
-Hospital ICUs: Enables real-time tracking of multiple patients.
+1.Remote Patient Monitoring: Helps doctors track chronic patients remotely.
+
+2.Athlete Performance Tracking: Monitors vitals during training sessions.
+
+3.Elderly Care: Alerts caregivers in case of abnormal vitals.
+
+4.Hospital ICUs: Enables real-time tracking of multiple patients.
 
 ### **Section 1: REST and GraphQL for Data Requests and Updates**
 
