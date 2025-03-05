@@ -31,7 +31,7 @@ Visualization Tools: Power BI, Grafana, or a custom web dashboard.
 Alerts: Sends SMS, emails, or notifications if vitals cross predefined thresholds.
 AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
-## **3. System Workflow:**
+## **2. System Workflow:**
 **a. Data Acquisition:** Sensors capture heart rate and SpO2 data.
 
 **b. Edge Processing:** Microcontroller filters noise and formats data.
@@ -44,9 +44,9 @@ AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
 **f. Data Visualization:** Healthcare professionals and patients monitor trends on dashboards.
 
-Long-Term Analysis: Predictive analytics identify risks over time.
+**g. Long-Term Analysis:** Predictive analytics identify risks over time.
 
-## **4. Use Cases for IOT monitoring system:**
+## **3. Use Cases for IOT monitoring system:**
 **a.Remote Patient Monitoring:** Helps doctors track chronic patients remotely.
 
 **b.Athlete Performance Tracking:** Monitors vitals during training sessions.
