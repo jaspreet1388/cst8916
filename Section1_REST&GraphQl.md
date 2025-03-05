@@ -47,13 +47,13 @@ AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 **g. Long-Term Analysis:** Predictive analytics identify risks over time.
 
 ## **3. Use Cases for IOT monitoring system:**
-**a.Remote Patient Monitoring:** Helps doctors track chronic patients remotely.
+**a. Remote Patient Monitoring:** Helps doctors track chronic patients remotely.
 
-**b.Athlete Performance Tracking:** Monitors vitals during training sessions.
+**b. Athlete Performance Tracking:** Monitors vitals during training sessions.
 
-**c.Elderly Care:** Alerts caregivers in case of abnormal vitals.
+**c. Elderly Care:** Alerts caregivers in case of abnormal vitals.
 
-**d.Hospital ICUs:** Enables real-time tracking of multiple patients.
+**d. Hospital ICUs:** Enables real-time tracking of multiple patients.
 
 ### **Section 1: REST and GraphQL for Data Requests and Updates**
 
