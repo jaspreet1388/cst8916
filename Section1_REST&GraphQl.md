@@ -8,25 +8,30 @@ Objective To understand the design, components, and working of a real-time IoT-b
 a. Wearable Sensors Heart Rate Sensor (PPG, ECG): Measures beats per minute (BPM). Oxygen Sensor (SpO2, Pulse Oximeter): Measures blood oxygen saturation levels.
 
 These sensors are embedded in smartwatches, fitness bands, or medical-grade devices.
-b. Microcontroller/Edge Device
 
+**b. Microcontroller/Edge Device**
 Examples: ESP32, Raspberry Pi, or any IoT-enabled medical device.
 Collects raw sensor data and processes it before transmission.
-c. Communication Module
+
+**c. Communication Module**
 Wireless Protocols: Bluetooth, Wi-Fi, LoRa, Zigbee, or NB-IoT.
 Ensures secure and efficient data transfer.
-d. Cloud/Edge Computing
+
+**d. Cloud/Edge Computing**
 Cloud Platforms: Azure IoT Hub, AWS IoT Core, Google Cloud IoT.
 Processes real-time data, applies analytics, and detects anomalies.
 Edge computing may be utilized for fast, low-latency processing.
-e. Database & Storage
+
+**e. Database & Storage**
 Time-Series Databases: InfluxDB, Firebase, or Azure Cosmos DB.
 Stores historical data for analysis and predictive modeling.
-f. Real-Time Dashboard & Alerts
+
+**f. Real-Time Dashboard & Alerts**
 Visualization Tools: Power BI, Grafana, or a custom web dashboard.
 Alerts: Sends SMS, emails, or notifications if vitals cross predefined thresholds.
 AI/ML Integration: Detects abnormal patterns indicating potential health issues.
-3. System Workflow
+
+**3. System Workflow**
 Data Acquisition: Sensors capture heart rate and SpO2 data.
 Edge Processing: Microcontroller filters noise and formats data.
 Data Transmission: Securely sent via Bluetooth/Wi-Fi to cloud servers.
@@ -34,11 +39,13 @@ Cloud Analytics: AI algorithms detect irregularities (e.g., arrhythmia, hypoxia)
 Real-Time Alerts: Notifications triggered in case of abnormal readings.
 Data Visualization: Healthcare professionals and patients monitor trends on dashboards.
 Long-Term Analysis: Predictive analytics identify risks over time.
-4. Use Cases
+
+**4. Use Cases**
 Remote Patient Monitoring: Helps doctors track chronic patients remotely.
 Athlete Performance Tracking: Monitors vitals during training sessions.
 Elderly Care: Alerts caregivers in case of abnormal vitals.
 Hospital ICUs: Enables real-time tracking of multiple patients.
+
 ### **Section 1: REST and GraphQL for Data Requests and Updates**
 
 In IoT healthcare monitoring, REST API facilitates data exchange using standard HTTP methods. A GET request retrieves real-time oxygen and heart rate data from an IoT Edge device, while a POST request sends new sensor data to Azure IoT Hub. A PUT request updates existing sensor values, ensuring accuracy, and a DELETE request removes outdated data. REST follows a stateless architecture, making each request independent, supporting caching for efficiency, and integrating with Azure API Management (APIM) for secure external access.
