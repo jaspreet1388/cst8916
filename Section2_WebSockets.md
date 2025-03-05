@@ -1,4 +1,3 @@
-
 WebSockets would significantly enhance the IoT healthcare monitoring system by enabling bi-directional, low-latency communication between IoT Edge devices, cloud services, and client applications. Unlike REST and GraphQL, which require repeated polling to retrieve new data, WebSockets allow a persistent connection, ensuring real-time updates for critical sensor readings like oxygen levels and heart rate.
 Implementation of WebSockets in IoT Healthcare Monitoring
 Establishing a WebSocket Connection:
@@ -13,33 +12,3 @@ The WebSocket server can broadcast alerts when oxygen levels drop below a critic
 Two-way Communication for Control & Alerts:
 Doctors or system admins can send commands (e.g., reset device, request additional data) via WebSockets.
 The IoT Edge device can respond immediately, enhancing responsiveness.
-Example WebSocket Implementation:
-import asyncio
-import websockets
-import json
-async def sensor_data(websocket, path):
-    while True:
-        # Simulating real-time sensor data
-        sensor_reading = {"oxygen_level": 98, "heart_rate": 72}
-        await websocket.send(json.dumps(sensor_reading))
-        await asyncio.sleep(1)  # Sends data every second
-start_server = websockets.serve(sensor_data, "localhost", 8765)
-asyncio.get_event_loop().run_until_complete(start_server)
-asyncio.get_event_loop().run_forever()
-This WebSocket server continuously streams live sensor data to clients, ensuring real-time updates.
-Q2: WebSockets vs. REST vs. GraphQL for Real-time Data Flow
-Feature	WebSockets	REST	GraphQL
-Connection Type	Persistent, bi-directional	Stateless, request-response	Single endpoint, client-driven queries
-Real-time Updates	Yes, via event-driven communication	No, requires polling	Yes, but through subscriptions
-Efficiency	Low latency, continuous stream	High latency due to multiple requests	Efficient but requires batching
-Data Transfer	Push-based updates	Pull-based (client requests data)	Flexible queries, but still pull-based
-Use Case	Live data streaming, chat apps, IoT monitoring	General API access, CRUD operations	Fetching structured data efficiently
-Key Differences:
-WebSockets vs. REST:
-REST requires constant polling for real-time data, leading to unnecessary API calls.
-WebSockets push updates instantly without polling, reducing bandwidth usage.
-WebSockets vs. GraphQL:
-GraphQL subscriptions allow clients to listen for updates, but WebSockets handle bi-directional communication seamlessly.
-WebSockets are faster for real-time streaming, while GraphQL remains structured and query-optimized.
-Conclusion:
-WebSockets are ideal for real-time sensor monitoring, ensuring instant updates without repeated polling. REST and GraphQL work well for structured data access, but WebSockets provide the lowest-latency, push-based communication needed for IoT healthcare monitoring.
