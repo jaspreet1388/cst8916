@@ -46,14 +46,14 @@ Data Visualization: Healthcare professionals and patients monitor trends on dash
 
 Long-Term Analysis: Predictive analytics identify risks over time.
 
-**4. Use Cases**
-1.Remote Patient Monitoring: Helps doctors track chronic patients remotely.
+**4. Use Cases for IOT monitoring system:**
+**a.Remote Patient Monitoring:** Helps doctors track chronic patients remotely.
 
-2.Athlete Performance Tracking: Monitors vitals during training sessions.
+**b.Athlete Performance Tracking:** Monitors vitals during training sessions.
 
-3.Elderly Care: Alerts caregivers in case of abnormal vitals.
+**c.Elderly Care:** Alerts caregivers in case of abnormal vitals.
 
-4.Hospital ICUs: Enables real-time tracking of multiple patients.
+**d.Hospital ICUs:** Enables real-time tracking of multiple patients.
 
 ### **Section 1: REST and GraphQL for Data Requests and Updates**
 
