@@ -49,7 +49,7 @@ async def sensor_data(websocket, path):
 
         await asyncio.sleep(1)  # Sends data  every second
  
-start_server = websockets.serve(sensor_data, "localhost", port_number)
+start_server = websockets.serve(sensor_data_oxygen_heartRate, "localhost", port_number)
  
 asyncio.get_event_loop().run_until_complete(start_server)
 
