@@ -33,7 +33,7 @@ Queries in GraphQL work like **GET requests in REST**, allowing clients to fetch
 |--------------|------------------|
 | **Fetch Sensor Data** (Equivalent to GET in REST) | ```query { getSensorData(id: "1") { oxygen_level heart_rate } }``` |
  
-✔ **Advantage:** Clients receive **only the requested fields**, reducing unnecessary data transfer.  
+**Advantage:** Clients receive **only the requested fields**, reducing unnecessary sensor  data transfer.  
  
 ---
  
