@@ -1,6 +1,6 @@
-### **Technology Recommendation and Justification**
-#### **Q1: Recommended Technology Approach**
-Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 and 2, I recommend a **hybrid approach combining WebSockets with REST API** for the **IoT healthcare monitoring system**.
+**Technology Recommendation and Justification**
+**Recommended Technology Approach**
+Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 and 2, we have come to conclusion that a **hybrid approach combining WebSockets with REST API** is best for  **IoT healthcare monitoring system**.
  
 - **WebSockets** should be used for real-time **continuous streaming of critical sensor data** (e.g., **oxygen levels and heart rate**) to enable **instant updates** without polling overhead.
 - **REST API** should be used for **non-real-time data retrieval, historical sensor records, configuration management, and user interactions** that don’t require live updates.
