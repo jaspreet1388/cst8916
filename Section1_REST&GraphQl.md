@@ -2,9 +2,9 @@
 
 **Objective:** To understand the design, components, and working of a real-time IoT-based monitoring system for heart rate and oxygen sensors, along with its applications in healthcare.
 
-1. Introduction With advancements in the Internet of Things (IoT), real-time health monitoring systems have become an essential part of modern healthcare. This assignment focuses on an IoT-based system that continuously tracks heart rate and oxygen saturation (SpO2) levels, enabling remote patient monitoring and real-time alerts.
+Introduction With advancements in the Internet of Things (IoT), real-time health monitoring systems have become an essential part of modern healthcare. This assignment focuses on an IoT-based system that continuously tracks heart rate and oxygen saturation (SpO2) levels, enabling remote patient monitoring and real-time alerts.
 
-**2. System Components**
+## **1. System Components**
 
 **a. Wearable Sensors** Heart Rate Sensor (PPG, ECG): Measures beats per minute (BPM). Oxygen Sensor (SpO2, Pulse Oximeter): Measures blood oxygen saturation levels.
 These sensors are embedded in smartwatches, fitness bands, or medical-grade devices.
@@ -31,7 +31,7 @@ Visualization Tools: Power BI, Grafana, or a custom web dashboard.
 Alerts: Sends SMS, emails, or notifications if vitals cross predefined thresholds.
 AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
-**3. System Workflow:**
+## **3. System Workflow:**
 **a. Data Acquisition:** Sensors capture heart rate and SpO2 data.
 
 **b. Edge Processing:** Microcontroller filters noise and formats data.
@@ -46,7 +46,7 @@ AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
 Long-Term Analysis: Predictive analytics identify risks over time.
 
-**4. Use Cases for IOT monitoring system:**
+## **4. Use Cases for IOT monitoring system:**
 **a.Remote Patient Monitoring:** Helps doctors track chronic patients remotely.
 
 **b.Athlete Performance Tracking:** Monitors vitals during training sessions.
