@@ -1,3 +1,4 @@
+In the IoT-based scenario, **REST API** manages data requests and updates using standard **HTTP methods**. A **GET request** (`/sensor-data`) retrieves real-time oxygen and heart rate data from the IoT Edge device, while a **POST request** (`/sensor-data`) allows new sensor data to be sent to Azure IoT Hub. To modify an existing record, a **PUT request** (`/sensor-data/{id}`) updates specific sensor values, ensuring data accuracy. If invalid or old data needs removal, a **DELETE request** (`/sensor-data/{id}`) deletes the specific entry. REST follows a **stateless architecture**, making each request independent. It supports caching for efficiency and integrates with **Azure API Management (APIM)** for secure external access. REST's structured endpoints make it simple, scalable, and suitable for handling IoT data efficiently.
 How REST API Fits Into the Solution
 Edge Device as an API Server
 
