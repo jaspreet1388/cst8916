@@ -186,6 +186,9 @@ This WebSocket server **continuously streams live sensor data** to clients, ensu
  
 
 Thus we can conclude that,  **WebSockets should be used for real-time sensor monitoring** to provide **instant updates** on oxygen levels and heart rate for the IOT based healthcare monitioring 
+
+---
+ 
 ---
 ### **Section 3: Technology Recommendation and Justification**
 
