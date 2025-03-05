@@ -264,7 +264,7 @@ Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 a
  
 ---
  
-### **Reason why Hybrid Approach Best for Performance, Scalability, and Real-time in IOT healthcare monitoring is best suited **
+### Reason why Hybrid Approach Best for Performance, Scalability, and Real-time in IOT healthcare monitoring is best suited 
 | **Factor** | **Why Hybrid Approach Works** |
 |------------|--------------------------------|
 | **Performance** | WebSockets ensure **low-latency real-time updates**, while REST handles **efficient batch data retrieval**. |
