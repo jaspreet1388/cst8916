@@ -33,6 +33,7 @@ AI/ML Integration: Detects abnormal patterns indicating potential health issues.
 
 **3. System Workflow**
 Data Acquisition: Sensors capture heart rate and SpO2 data.
+
 Edge Processing: Microcontroller filters noise and formats data.
 
 Data Transmission: Securely sent via Bluetooth/Wi-Fi to cloud servers.
