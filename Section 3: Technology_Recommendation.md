@@ -1,4 +1,4 @@
-#####**Section 3: Technology Recommendation and Justification**
+##### **Section 3: Technology Recommendation and Justification**
 
 **Recommended Technology Approach**
 Based on the analysis of **REST, GraphQL**, and **WebSockets** from Sections 1 and 2, we have come to conclusion that a **hybrid approach combining WebSockets with REST API** is best for  **IoT healthcare monitoring system**.
