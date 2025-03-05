@@ -1,22 +1,22 @@
-**# Assignment Title: Real-Time IoT Monitoring System for Heart Rate and Oxygen Sensors**
+**Assignment Title: Real-Time IoT Monitoring System for Heart Rate and Oxygen Sensors**
 
-## **Objective**
+**Objective**
 To understand the design, components, and working of a real-time IoT-based monitoring system for heart rate and oxygen sensors, along with its applications in healthcare.
 
 ---
 
-## **1. Introduction**
+**1. Introduction**
 With advancements in the Internet of Things (IoT), real-time health monitoring systems have become an essential part of modern healthcare. This assignment focuses on an IoT-based system that continuously tracks heart rate and oxygen saturation (SpO2) levels, enabling remote patient monitoring and real-time alerts.
 
 ---
 
-## **2. System Components**
-### **a. Wearable Sensors**
-- **Heart Rate Sensor (PPG, ECG):** Measures beats per minute (BPM).
-- **Oxygen Sensor (SpO2, Pulse Oximeter):** Measures blood oxygen saturation levels.
+**2. System Components**
+**a. Wearable Sensors**
+**Heart Rate Sensor (PPG, ECG):** Measures beats per minute (BPM).
+**Oxygen Sensor (SpO2, Pulse Oximeter):** Measures blood oxygen saturation levels.
 - These sensors are embedded in smartwatches, fitness bands, or medical-grade devices.
 
-### **b. Microcontroller/Edge Device**
+**b. Microcontroller/Edge Device**
 - Examples: ESP32, Raspberry Pi, or any IoT-enabled medical device.
 - Collects raw sensor data and processes it before transmission.
 
