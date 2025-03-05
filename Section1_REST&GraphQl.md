@@ -1,6 +1,6 @@
 ### Real-Time IoT Monitoring System for Heart Rate and Oxygen Sensors 
 
-Objective To understand the design, components, and working of a real-time IoT-based monitoring system for heart rate and oxygen sensors, along with its applications in healthcare.
+**Objective:** To understand the design, components, and working of a real-time IoT-based monitoring system for heart rate and oxygen sensors, along with its applications in healthcare.
 
 1. Introduction With advancements in the Internet of Things (IoT), real-time health monitoring systems have become an essential part of modern healthcare. This assignment focuses on an IoT-based system that continuously tracks heart rate and oxygen saturation (SpO2) levels, enabling remote patient monitoring and real-time alerts.
 
