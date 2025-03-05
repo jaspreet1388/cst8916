@@ -47,5 +47,20 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
 | **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id) }``` |
  
 **Advantage:** A **single mutation request** can modify or delete information collected from the sensors without needing multiple API calls.  
+
+
+---
+ 
+### **🚀 Which One is Better for IoT Healthcare Monitoring?**  
+ 
+| **Use Case** | **Best Choice** | **Why?** |
+|-------------|---------------|---------|
+| **Simple IoT Data Retrieval (Heart Rate & Oxygen Levels)** | REST API | Easier to implement, well-supported, efficient for simple data retrieval |
+| **Low Bandwidth IoT Devices (e.g., Wearable Health Trackers)** | GraphQL | Fetch **only required fields**, reducing **network traffic** |
+| **Real-Time Patient Monitoring (ICU, Home Health Devices)** | GraphQL | **Subscriptions** push data **instantly** when new sensor readings are available |
+| **Large-Scale IoT Deployment (Hospitals, Healthcare Networks)** | REST API | More **scalable**, better **caching**, and **efficient batch processing** |
+| **Complex Queries (Multiple Sensor Types, AI/Analytics, Patient Data Aggregation)** | GraphQL | Query **multiple sensor readings** with a **single request** |
+ 
+---
  
 ---
