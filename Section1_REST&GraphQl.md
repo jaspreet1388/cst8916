@@ -42,10 +42,10 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
  
 | **Operation** | **GraphQL Mutation** |
 |--------------|------------------|
-| **Add New Sensor Data** (Equivalent to POST in REST) | ```mutation { addSensorData(oxygen_level: 95, heart_rate: 78) { id oxygen_level heart_rate } }``` |
-| **Update Sensor Data** (Equivalent to PUT in REST) | ```mutation { updateSensorData(id: "2", oxygen_level: 97) { id oxygen_level heart_rate } }``` |
-| **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id: "2") }``` |
+| **Add New Sensor Data** (Equivalent to POST in REST) | ```mutation { addSensorData(oxygen_level, heart_rate) { id oxygen_level heart_rate } }``` |
+| **Update Sensor Data** (Equivalent to PUT in REST) | ```mutation { updateSensorData(id, oxygen_level) { id oxygen_level heart_rate } }``` |
+| **Delete Sensor Data** (Equivalent to DELETE in REST) | ```mutation { deleteSensorData(id) }``` |
  
-✔ **Advantage:** A **single mutation request** can modify or delete data without needing multiple API calls.  
+**Advantage:** A **single mutation request** can modify or delete information collected from the sensors without needing multiple API calls.  
  
 ---
