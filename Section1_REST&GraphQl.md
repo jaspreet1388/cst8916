@@ -4,7 +4,7 @@
 
 Introduction With advancements in the Internet of Things (IoT), real-time health monitoring systems have become an essential part of modern healthcare. This assignment focuses on an IoT-based system that continuously tracks heart rate and oxygen saturation (SpO2) levels, enabling remote patient monitoring and real-time alerts.
 
-## **1. System Components**
+## **1. System Components for IOT monitoring **
 
 **a. Wearable Sensors** Heart Rate Sensor (PPG, ECG): Measures beats per minute (BPM). Oxygen Sensor (SpO2, Pulse Oximeter): Measures blood oxygen saturation levels.
 These sensors are embedded in smartwatches, fitness bands, or medical-grade devices.
