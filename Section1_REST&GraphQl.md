@@ -103,7 +103,7 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
 
 ---
  
-### Which One is Better for IoT Healthcare Monitoring
+### Comparison for IoT Healthcare Monitoring for different protocols
  
 | **Use Case** | **Preferred Method** | **Reason** |
 |-------------|---------------|---------|
