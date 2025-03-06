@@ -284,3 +284,5 @@ Based on the analysis of REST, GraphQL, and WebSockets from Sections 1 and 2, we
  
 ### **Final Conclusion**
 The **WebSockets + REST hybrid approach** ensures **instantaneous real-time alerts** for **critical sensor readings** while maintaining a **scalable and structured API for broader system management**. This balances **performance, efficiency, and real-time requirements**, making it the optimal choice for the **IoT healthcare monitoring system**.
+
+
