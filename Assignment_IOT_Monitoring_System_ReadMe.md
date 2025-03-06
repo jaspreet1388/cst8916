@@ -288,6 +288,6 @@ The **WebSockets + REST hybrid approach** ensures **instantaneous real-time aler
 **References:** 
 OpenAI. (2025, March 5). Analyzing the IOT Based scenarios and code syntax  [Large language model]. OpenAI.
 
-
+**Please find the link for youtube video presentation here: https://youtu.be/Zi3r3lHK5iE**
 
 
