@@ -256,7 +256,7 @@ Based on the analysis of REST, GraphQL, and WebSockets from Sections 1 and 2, we
 **1. Real-time Data Streaming with WebSockets**
 - The **primary requirement of IoT healthcare monitoring** is to ensure **continuous and instant updates** from sensors **without delays**.
 - **REST and GraphQL require polling**, which increases **network load and latency**, whereas **WebSockets maintain a persistent, low-latency connection**.
-- **Example:** If a patient’s **oxygen level drops suddenly**, a **WebSocket-based push notification** can alert doctors instantly instead of waiting for the next REST request.
+- **Example:** If a patient’s oxygen level drops suddenly, a WebSocket-based push notification can alert doctors instantly instead of waiting for the next REST request.
  
 **2. Efficient Data Management with REST API**
 - **REST API remains useful for non-real-time operations**, such as:
