@@ -127,17 +127,16 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
 | **Security & Authentication** | Well-established security mechanisms (OAuth, API keys, JWT). | Requires additional considerations for securing dynamic queries. |
 | **Best Use Cases** | Simple IoT data retrieval and batch processing. | Low-bandwidth IoT devices, complex queries, and real-time monitoring. |
 
-- **Use REST** when:
+**Use REST for IOT Monitoring is recommended when:**
   - Simple, predefined API endpoints are needed for fetching sensor data.
   - Caching and API security are primary concerns.
   - Large-scale deployments require robust performance.
 
-- **Use GraphQL** when:
-  - Real-time monitoring and **efficient data fetching** are essential.
+- **Use GraphQL for IOT Monitoring is recommended when:**
+  - Real-time monitoring and efficient data fetching are essential.
   - IoT devices have limited bandwidth, and reducing unnecessary data transfer is a priority.
   - Complex queries across multiple sensor data types are needed.
 
-Would you like me to insert this into the document?
 ---
  
 ---
