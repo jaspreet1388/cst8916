@@ -105,7 +105,7 @@ Mutations handle **POST, PUT, and DELETE** operations by modifying data on the s
  
 ### Comparison for IoT Healthcare Monitoring for different protocols
  
-| **Use Case** | **Preferred Method** | **Reason** |
+| **Use case scenario** | **Preferred Method** | **Reason** |
 |-------------|---------------|---------|
 | **Simple IoT Data Retrieval (Heart Rate & Oxygen Levels)** | REST API | Easier to implement, well-supported, efficient for simple data retrieval |
 | **Low Bandwidth IoT Devices (e.g., Wearable Health Trackers)** | GraphQL | Fetch **only required fields**, reducing **network traffic** |
