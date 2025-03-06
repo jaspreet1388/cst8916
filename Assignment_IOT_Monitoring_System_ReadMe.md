@@ -170,7 +170,7 @@ WebSockets would significantly enhance the IoT healthcare monitoring system by e
 
    - The IoT Edge device can respond **immediately**, enhancing responsiveness.
  
-#### **Example WebSocket Implementation:**
+### **Example WebSocket Implementation:**
 
 ```python
 
