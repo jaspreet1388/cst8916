@@ -76,10 +76,10 @@ REST APIs follow a **resource-based URL structure** with multiple endpoints for 
 ---
 
 
-**GraphQL for Handling Data Operations**
+### **GraphQL for Handling Data Operations**
 GraphQL provides a single endpoint (/graphql) that allows clients to request exactly the data they need using queries (for retrieving data) and mutations (for modifying data). Unlike REST, which requires multiple endpoints for different operations, GraphQL enables flexible and batch requests through a single query for the heart rate and oxygen sensor data for the IOT healthcare monitoring system.
 
-## GraphQL Queries (Retrieving Data)  
+### GraphQL Queries (Retrieving Data)  
 Queries in GraphQL work like **GET requests in REST**, allowing clients to fetch **specific fields** instead of retrieving the full dataset.  
  
 | **Operation** | **GraphQL Query** |
@@ -232,7 +232,7 @@ This WebSocket server **continuously streams live sensor data** to clients, ensu
 ### **Comparison between REST, GraphQL and Websockets for IoT Healthcare Monitoring**
 | Scenario | Best Approach |
 |----------|--------------|
-| **Fetching past sensor data (e.g., stored records)** | REST or GraphQL |
+| **Fetching past sensor data (e.g., stored records)** | REST |
 | **Requesting only specific fields** | GraphQL |
 | **Real-time monitoring of oxygen & heart rate** | WebSockets |
  
