@@ -278,7 +278,6 @@ GROUP BY
   "avgIceThickness": 17.8,
   "maxSnowAccumulation": 13,
   "timestamp": "2025-04-10T14:55:00Z",
-  "condition": "Unsafe"
 }
 ```
 
