@@ -88,3 +88,7 @@ Azure Stream Analytics (Real-Time Processing)
         ↓
 Azure Blob Storage (Processed Output)
 
+
+![image](https://github.com/user-attachments/assets/4b585aec-6fc6-4713-9c90-0bebed6fc9aa)
+
+
