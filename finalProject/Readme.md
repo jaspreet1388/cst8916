@@ -440,7 +440,10 @@ A typical processed result file looks like this:
   "condition": "Unsafe" // this is reduced field which was not included in the actual query to reduce the SU units and complexity of query
 }
 ```
-The screenshot of the actual data:
+The screen shot of the json output files in the container:
+![image](https://github.com/user-attachments/assets/3bd54176-6a8c-46cc-aeac-0d0e33fb7dfb)
+
+The screenshot of the actual json output:
 ![image](https://github.com/user-attachments/assets/0a1bcd18-2375-4cd7-9b31-70aee92ec3b0)
 
 
