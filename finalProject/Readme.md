@@ -75,6 +75,7 @@ Stores final processed data:
   - Power BI dashboards
   - Trigger-based alerts
 
+![image](https://github.com/user-attachments/assets/ac5aaf57-477a-4c94-9ed7-7b1a753e9897)
 
 
 ### End-to-End Data Flow
