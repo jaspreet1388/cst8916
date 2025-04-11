@@ -135,5 +135,6 @@ The script used on the linux to stimulate the data are stored in the sensor-simu
 
 - .env file stores device connection strings
 
-
+## Azure IoT Hub Configuration:
+For the purpose readability, the screenshots of IOT hub configuration are included 
 
