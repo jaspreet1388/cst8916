@@ -396,6 +396,9 @@ Azure services have been explained in detail above, to summarise that here are b
   "condition": "Unsafe" // this is sample statement which was reduced to simplify the query and SUs
 }
 ```
+The sample of simulated data through script :
+![image](https://github.com/user-attachments/assets/073d6401-7b4d-4afe-a67e-c0bc0c173e6a)
+
 
 
 
