@@ -270,7 +270,7 @@ GROUP BY
     -- Use a TumblingWindow to group events into fixed, non-overlapping 5-minute intervals
     TumblingWindow(minute, 5)
 
-
+```
 ### Sample Output : JSON format
 ```json
 {
@@ -280,6 +280,7 @@ GROUP BY
   "timestamp": "2025-04-10T14:55:00Z",
   "condition": "Unsafe"
 }
+```
 
 
 
