@@ -1,0 +1,4 @@
+
+DOWS_LAKE_CONN_STRING="HostName=rideauhub.azure-devices.net;DeviceId=dowlakedev;SharedAccessKey=8L4ytM7lvVOvkMLG3z57vPTEAPyrcjWR/Eb9I+lEWXU="
+FIFTH_AVE_CONN_STRING="HostName=rideauhub.azure-devices.net;DeviceId=fifthavenuedev;SharedAccessKey=1DMGqG9Fp7JW3cxLGZvqz///r/OPz51s+YHTw8xruc8="
+NAC_CONN_STRING="HostName=rideauhub.azure-devices.net;DeviceId=nacdev;SharedAccessKey=KjJXW1aw93Rib03tf2ViivFpno2PxZeHsGO+rHg96+0="
