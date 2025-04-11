@@ -281,6 +281,20 @@ GROUP BY
 }
 ```
 
+## Azure Blob Storage
+
+Azure Blob Storage is used to **store the processed output** of real-time data from Azure Stream Analytics. The processed data includes safety analysis per location based on ice thickness and snow accumulation.
+
+
+### Folder Structure and File Organization
+
+The output files are written to a **container** in Azure Blob Storage, commonly named `canal-data` or `rideau-data`.
+
+![image](https://github.com/user-attachments/assets/85f9e05a-6965-40ec-bdc5-047a7a07ba91)
+
+
+
+
 
 
 
