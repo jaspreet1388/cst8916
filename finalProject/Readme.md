@@ -317,6 +317,103 @@ To decrese the complexity so that SU units are not over leveraged, the query doe
 ```
 
 
+## Usage Instructions:
+
+This section provides step-by-step guidance for running the IoT sensor simulation, configuring Azure services, and accessing the processed results stored in Azure Blob Storage.
+
+---
+
+### Running the IoT Sensor Simulation
+
+#### Clone the Repository
+```bash
+git clone finalProject
+cd finalProject/sensor-simulation
+```
+### 2. Install Required Python Dependencies
+
+Install python latest version if required, then install the required packages manually:
+
+```bash
+pip install azure-iot-device python-dotenv
+```
+
+- `azure-iot-device`: Connects the Python script to Azure IoT Hub
+- `python-dotenv`: Loads environment variables from a `.env` file
+
+#### 3. Set Up Environment Variables
+Create a `.env` file and paste your IoT Hub device connection strings:
+
+```env
+DOWS_LAKE_CONN_STRING="HostName=...;DeviceId=DowsLakeDevice;SharedAccessKey=..."
+FIFTH_AVE_CONN_STRING="HostName=...;DeviceId=FifthAvenueDevice;SharedAccessKey=..."
+NAC_CONN_STRING="HostName=...;DeviceId=NACDevice;SharedAccessKey=..."
+```
+
+#### 4. Run the Simulation Scripts
+Open three separate terminal windows or tabs and run each script:
+
+```bash
+python simulate_dowslake.py
+python simulate_fifthavenue.py
+python simulate_nac.py
+```
+
+Each script continuously sends telemetry data every 10 seconds to Azure IoT Hub.
+
+---
+
+### Configuring Azure Services: 
+Azure services have been explained in detail above, to summarise that here are brief steps : 
+
+
+#### Azure IoT Hub
+- Create an **IoT Hub** (Standard Tier) in Azure.
+- Register 3 devices: `DowsLakeDevice`, `FifthAvenueDevice`, and `NACDevice`.
+- Copy their **connection strings** and add them to the simulation script `.env` file.
+
+#### Azure Stream Analytics Job
+- Create a **Stream Analytics job** in the same region.
+- Add **IoT Hub as input** (`rideauinput`), format: JSON.
+- Add **Blob Storage as output** (`rideauoutput`), format: JSON.
+- Use a 5-minute tumbling window query to process and label safety status.
+- Set **Streaming Units** to 2 or more.
+- Start the job to begin real-time processing.
+
+#### zure Blob Storage
+- Create a **Blob container** (e.g., `rideau-data`).
+- Processed data will be stored in **JSON format**
+
+
+### 🧪 Sample Output
+
+```json
+{
+  "location": "NAC",
+  "avgIceThickness": 17.8,
+  "maxSnowAccumulation": 13,
+  "timestamp": "2025-04-10T14:55:00Z",
+  "condition": "Unsafe" // this is sample statement which was reduced to simplify the query and SUs
+}
+```
+
+
+
+## Summary of configuration: 
+
+| Task | Description |
+|------|-------------|
+| Sensor Simulation | Run 3 Python scripts to send data to Azure |
+| Azure IoT Hub | Receives data from simulated devices |
+| Stream Analytics | Processes and labels unsafe conditions |
+| Blob Storage | Stores summarized, structured output in JSON |
+```
+
+
+
+
+
+
 
 
 
