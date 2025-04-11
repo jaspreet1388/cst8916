@@ -439,6 +439,7 @@ A typical processed result file looks like this:
   "timestamp": "2025-04-10T14:55:00Z",
   "condition": "Unsafe" // this is reduced field which was not included in the actual query to reduce the SU units and complexity of query
 }
+```
 The screenshot of the actual data:
 
 ![image](https://github.com/user-attachments/assets/d6de34d2-1f2a-4e9b-a40e-556d6961b687)
