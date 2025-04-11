@@ -441,8 +441,8 @@ A typical processed result file looks like this:
 }
 ```
 The screenshot of the actual data:
+![image](https://github.com/user-attachments/assets/0a1bcd18-2375-4cd7-9b31-70aee92ec3b0)
 
-![image](https://github.com/user-attachments/assets/d6de34d2-1f2a-4e9b-a40e-556d6961b687)
 
 
 
