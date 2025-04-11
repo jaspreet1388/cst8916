@@ -89,7 +89,51 @@ Azure Stream Analytics (Real-Time Processing)
         ↓
 Azure Blob Storage (Processed Output)
 
+```
+## Implementation Details
 
-![image](https://github.com/user-attachments/assets/4b585aec-6fc6-4713-9c90-0bebed6fc9aa)
+For the purpose of implementing the project we need the sensor, IOT Hub and analyzing stream and later on which can be used for the represenation through PowerBI. To implement the project we first need to created the IOT hub with sensors which will recieve the data, this can be created on azure IOT hub, after that we need to simulate the data from the host, data is simulated and with the connection string information, they are updated to the devices on the hub, later that data can be analyzed on the IOT stream analytics job and appropriate information can be derived.
+
+**Here is the step by step implemenation:**
+
+---
+
+## IoT Sensor Simulation
+
+### Overview:
+Three virtual sensors simulate environmental monitoring devices located at:
+- Dow’s Lake
+- Fifth Avenue
+- NAC
+
+Each sensor:
+- Generates telemetry data every 10 seconds
+- Sends the data to Azure IoT Hub using the **Azure IoT Device SDK for Python**
+
+### 🔧 JSON Payload Format:
+```json
+{
+  "location": "Dow's Lake",
+  "iceThickness": 27,
+  "surfaceTemperature": -1.2,
+  "snowAccumulation": 8,
+  "externalTemperature": -5,
+  "timestamp": "2025-04-10T12:00:00Z"
+}
+
+```
+## Scripts Used:
+The script used on the linux to stimulate the data are stored in the sensor-simulation/ directory of the final project, these are  :
+
+- simulate_dowslake.py
+
+- simulate_fifthavenue.py
+
+- simulate_nac.py
+
+- simulate_sensor.py (shared logic)
+
+- .env file stores device connection strings
+
 
 
