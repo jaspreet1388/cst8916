@@ -446,6 +446,36 @@ The screen shot of the json output files in the container:
 The screenshot of the actual json output:
 ![image](https://github.com/user-attachments/assets/0a1bcd18-2375-4cd7-9b31-70aee92ec3b0)
 
+## Reflection
+
+### Challenges Faced
+
+1. **Stream Analytics Job Failing to Start**
+   - **Issue**: The Stream Analytics job repeatedly failed due to insufficient Streaming Units (SUs) for the complexity of the query.
+   - **Solution**: The query was simplified in phases, and the SU count was gradually increased to match the number of IoT Hub partitions, resolving performance issues.
+
+
+2. **Query Optimization in Stream Analytics**
+   - **Issue**: Writing efficient and low-resource-consuming queries with `GROUP BY`, `AVG`, and `CASE` statements.
+   - **Solution**: The query was tested step-by-step starting from `SELECT *`, then incrementally building up to the final logic using tumbling windows and safety conditions.
+
+
+
+### Lessons Learned
+The important lesson learned is : 
+- **Start simple**: Begin with minimal setups and build incrementally.
+- **Monitor often**: Azure CLI and portal monitoring tools are essential for real-time debugging.
+- **Streaming Units matter**: Always align SU count with input complexity and partition count.
+
+
+---
+
+### Outcome
+
+Despite the challenges, the system was successfully deployed and validated end-to-end. It provides real-time safety evaluations of ice conditions and offers structured outputs suitable for further analysis, reporting, or automation.
+
+
+
 
 
 
