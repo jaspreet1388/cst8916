@@ -110,7 +110,7 @@ Each sensor:
 - Generates telemetry data every 10 seconds
 - Sends the data to Azure IoT Hub using the **Azure IoT Device SDK for Python**
 
-### 🔧 JSON Payload Format:
+### JSON Payload Format:
 ```json
 {
   "location": "Dow's Lake",
@@ -136,5 +136,151 @@ The script used on the linux to stimulate the data are stored in the sensor-simu
 - .env file stores device connection strings
 
 ## Azure IoT Hub Configuration:
-For the purpose readability, the screenshots of IOT hub configuration are included 
+### For the purpose readability, the screenshots of IOT hub configuration are included separately under screenshots/IOt_HUB-Configuration.pdf
+
+Here are the steps of the configuration followed :
+### Azure IoT Hub Configuration
+
+Azure IoT Hub serves as the central message broker for device-to-cloud communication. It collects telemetry data from the simulated IoT sensors and routes it to downstream services such as Azure Stream Analytics.
+
+---
+
+### Step-by-Step Configuration
+
+### 1. Create the IoT Hub
+
+1. Go to the azure portal.
+2. Search for **IoT Hub** → Click **+ Create**.
+3. In the **Basics** tab:
+   - **Subscription**: Choose your Azure subscription.
+   - **Resource Group**: Create or select an existing group (e.g., `rideau-rg`).
+   - **IoT Hub Name**: The name of the hub (e.g., `rideaucanalhub`).
+   - **Region**: Choose a nearby region like `Canada Central`.
+4. In the **Tier** section, choose **Standard (S1)** — required for multiple devices and routing.
+
+Click **Review + Create**, then **Create**.
+
+---
+
+### 2. Register IoT Devices
+
+Once the IoT Hub is deployed:
+
+1. Go to your IoT Hub → **Devices**.
+2. Click **+ New Device** and add:
+   - `DowsLakeDevice`
+   - `FifthAvenueDevice`
+   - `NACDevice`
+3. Leave authentication type as **Symmetric key**.
+4. Save each device and copy their **Primary Connection Strings** for use in simulation scripts.
+
+---
+
+### 3. Verify Endpoints
+
+Azure IoT Hub has a built-in Event Hub-compatible endpoint used for routing messages to services like Stream Analytics.
+
+To view:
+1. In your IoT Hub, go to **Built-in endpoints**.
+2. Review:
+   - **Event Hub-compatible name**
+   - **Partition count** (default is 4)
+   - **Endpoint**: `messages/events` ← This is the default path Stream Analytics listens to.
+
+---
+
+### 4. Configure Message Routing (Optional)
+
+   - Endpoint: default Event Hub endpoint (`messages/events`)
+
+> By default all device messages go to the default endpoint automatically.
+
+## Azure Stream Analytics Job
+
+Azure Stream Analytics (ASA) is used to process telemetry data from IoT devices in real-time. It ingests data from Azure IoT Hub, applies a custom SQL-like query to evaluate skating conditions, and outputs the results to Azure Blob Storage.
+For the purpose of simplification the screenshots of the azure stream analytics are inlcuded in the directory screenshots/Azure_SA_job.pdf.
+
+**Here are the steps of the configuration :**
+---
+
+### Job Configuration Overview
+
+| Configuration Component | Value |
+|--------------------------|-------|
+| **Job Name**             | `rideaustream` |
+| **Streaming Units**      | Minimum `2`, recommended `3+` |
+| **Input Source**         | Azure IoT Hub (`rideauinput`) |
+| **Output Destination**   | Azure Blob Storage (`rideauoutput`) |
+| **Output Format**        | JSON |
+| **Windowing**            | Tumbling Window (5-minute interval) |
+| **Partition Alignment**  | Input SU count matched to IoT Hub partitions |
+
+---
+
+### Input Configuration (IoT Hub)
+
+- **Alias**: `rideauinput`
+- **Source**: Azure IoT Hub
+- **Consumer Group**: `$Default`
+- **Serialization Format**: JSON
+- **Encoding**: UTF-8
+- **Timestamp Source**: Use `timestamp` field from device messages
+
+---
+
+### Output Configuration (Blob Storage)
+
+- **Alias**: `rideauoutput`
+- **Sink Type**: Azure Blob Storage
+- **Container Name**: `canal-data`
+- **Output Format**: JSON (CSV optional)
+- **Path Pattern**: `skateway/{date}/{location}` (optional but recommended)
+
+---
+
+### Sample Query: 5-Minute Tumbling Window
+
+This query analyzes ice and snow data per location every 5 minutes and determines safety status.
+```sql
+-- Select the location field from each incoming message
+SELECT 
+    location,
+
+    -- Calculate the average ice thickness over the 5-minute window
+    AVG(iceThickness) AS avgIceThickness,
+
+    -- Find the maximum snow accumulation over the 5-minute window
+    MAX(snowAccumulation) AS maxSnowAccumulation,
+
+    -- Output the system-generated timestamp marking the end of the window
+    System.Timestamp AS timestamp
+
+-- Define the output target for the processed results
+INTO
+    rideauoutput  -- This refers to the Blob Storage output alias
+
+-- Define the input source for the stream of data
+FROM
+    rideauinput   -- This refers to the IoT Hub input alias
+
+-- Group and aggregate the data
+GROUP BY
+    location,  -- Perform separate aggregations for each location (e.g., Dow’s Lake, NAC, etc.)
+
+    -- Use a TumblingWindow to group events into fixed, non-overlapping 5-minute intervals
+    TumblingWindow(minute, 5)
+
+
+### Sample Output : JSON format
+```json
+{
+  "location": "NAC",
+  "avgIceThickness": 17.8,
+  "maxSnowAccumulation": 13,
+  "timestamp": "2025-04-10T14:55:00Z",
+  "condition": "Unsafe"
+}
+
+
+
 
