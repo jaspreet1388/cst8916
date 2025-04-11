@@ -24,7 +24,7 @@ The key challenge that this system addresses is the real-time monitoring and det
 ### Objective:
 To continuously monitor ice conditions across multiple locations on the Rideau Canal and determine whether it's safe for public skating — using simulated IoT sensors, real-time data streaming, and cloud-based analytics.
 
----
+
 
 ## Components:
 
@@ -43,7 +43,7 @@ Each device generates telemetry every 10 seconds:
 
 Devices are registered with Azure IoT Hub and connect securely via the SDK.
 
----
+
 
 ### 2. Azure IoT Hub (Ingestion Layer)
 Azure IoT Hub acts as the message broker:
@@ -52,7 +52,7 @@ Azure IoT Hub acts as the message broker:
 - Routes data to processing endpoints like Stream Analytics
 - Uses internal **partitioning** for scalability
 
----
+
 
 ### 3. Azure Stream Analytics (Processing Layer)
 Processes incoming data with a real-time query:
@@ -64,7 +64,7 @@ Processes incoming data with a real-time query:
   - `MAX(snowAccumulation)`
  - Outputs structured JSON results to Blob Storage
 
----
+
 
 ### 4. Azure Blob Storage (Storage Layer)
 Stores final processed data:
@@ -75,9 +75,9 @@ Stores final processed data:
   - Power BI dashboards
   - Trigger-based alerts
 
----
 
-### 🔁 End-to-End Data Flow
+
+### End-to-End Data Flow
 
 ```text
 Simulated IoT Sensors
