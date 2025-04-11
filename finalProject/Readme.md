@@ -411,6 +411,39 @@ The sample of simulated data through script :
 | Stream Analytics | Processes and labels unsafe conditions |
 | Blob Storage | Stores summarized, structured output in JSON |
 
+## Results
+
+The system successfully simulates real-time environmental monitoring of the Rideau Canal Skateway, processes data in Azure Stream Analytics, and stores summarized insights in Azure Blob Storage for safety evaluation and analysis.
+
+---
+
+### Key Findings
+
+- Data was aggregated every **5 minutes** per location using a **Tumbling Window**.
+- **Average ice thickness** and **maximum snow accumulation** were calculated in each time window.
+- A safety condition was applied using logic like:
+  - `Unsafe` if `AVG(iceThickness) < 20 cm` or `MAX(snowAccumulation) > 12 cm`
+  - `Safe` otherwise
+
+---
+
+### Sample Output File (JSON)
+
+A typical processed result file looks like this:
+
+```json
+{
+  "location": "NAC",
+  "avgIceThickness": 17.8,
+  "maxSnowAccumulation": 13,
+  "timestamp": "2025-04-10T14:55:00Z",
+  "condition": "Unsafe" // this is reduced field which was not included in the actual query to reduce the SU units and complexity of query
+}
+The screenshot of the actual data:
+
+![image](https://github.com/user-attachments/assets/d6de34d2-1f2a-4e9b-a40e-556d6961b687)
+
+
 
 
 
