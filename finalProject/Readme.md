@@ -1,5 +1,5 @@
-### **Final Project Assignment: Real-time Monitoring System for Rideau Canal Skateway**
-## **Scenario: Rideau Canal Skateway Monitoring**
+# **Final Project Assignment: Real-time Monitoring System for Rideau Canal Skateway**
+### **Scenario: Rideau Canal Skateway Monitoring**
 The Rideau Canal Skateway, a historic and world-renowned attraction in Ottawa, needs constant monitoring to ensure skater safety. You have been hired by the National Capital Commission (NCC) to build a real-time data streaming system that will:
 
 Simulate IoT sensors to monitor ice conditions and weather factors along the canal.
