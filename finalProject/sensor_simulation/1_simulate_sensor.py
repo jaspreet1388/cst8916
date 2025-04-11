@@ -21,7 +21,7 @@ def simulate_sensor_data(location):
 def run_simulation(location, conn_string):
     device_client = IoTHubDeviceClient.create_from_connection_string(conn_string)
 
-    print(f"🚀 Starting simulation for {location}... Press Ctrl+C to stop.")
+    print(f" Starting simulation for {location}... Press Ctrl+C to stop.")
 
     try:
         while True:
@@ -31,7 +31,7 @@ def run_simulation(location, conn_string):
             print(f"[{location}] Sent: {data}")
             time.sleep(10)
     except KeyboardInterrupt:
-        print(f"\n🛑 Simulation for {location} stopped.")
+        print(f"\n Simulation for {location} stopped.")
     finally:
         device_client.shutdown()
 
