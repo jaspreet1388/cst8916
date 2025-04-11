@@ -385,7 +385,7 @@ Azure services have been explained in detail above, to summarise that here are b
 - Processed data will be stored in **JSON format**
 
 
-### 🧪 Sample Output
+### Sample Output
 
 ```json
 {
@@ -407,7 +407,7 @@ Azure services have been explained in detail above, to summarise that here are b
 | Azure IoT Hub | Receives data from simulated devices |
 | Stream Analytics | Processes and labels unsafe conditions |
 | Blob Storage | Stores summarized, structured output in JSON |
-```
+
 
 
 
