@@ -90,13 +90,10 @@ Azure Stream Analytics (Real-Time Processing)
 Azure Blob Storage (Processed Output)
 
 ```
-## Implementation Details
+
+## **Here are the step by step implemenation:**
 
 For the purpose of implementing the project we need the sensor, IOT Hub and analyzing stream and later on which can be used for the represenation through PowerBI. To implement the project we first need to created the IOT hub with sensors which will recieve the data, this can be created on azure IOT hub, after that we need to simulate the data from the host, data is simulated and with the connection string information, they are updated to the devices on the hub, later that data can be analyzed on the IOT stream analytics job and appropriate information can be derived.
-
-
----
-## **Here are the step by step implemenation:**
 
 
 
