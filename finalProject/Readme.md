@@ -378,7 +378,7 @@ Azure services have been explained in detail above, to summarise that here are b
 - Set **Streaming Units** to 2 or more.
 - Start the job to begin real-time processing.
 
-#### zure Blob Storage
+#### Azure Blob Storage
 - Create a **Blob container** (e.g., `rideau-data`).
 - Processed data will be stored in **JSON format**
 
