@@ -232,8 +232,7 @@ For the purpose of simplification the screenshots of the azure stream analytics 
 - **Alias**: `rideauoutput`
 - **Sink Type**: Azure Blob Storage
 - **Container Name**: `canal-data`
-- **Output Format**: JSON (CSV optional)
-- **Path Pattern**: `skateway/{date}/{location}` (optional but recommended)
+- **Output Format**: JSON 
 
 ---
 
