@@ -68,7 +68,7 @@ Processes incoming data with a real-time query:
 
 ### 4. Azure Blob Storage (Storage Layer)
 Stores final processed data:
-- Organized by date and location (e.g., `canal-data/2025-04-10/dowslake-17:05.json`)
+- Organized by date and location (e.g., `canal-data/dowslake-17:05.json`)
 - JSON format for easy querying and downstream consumption
 - Can be used for:
   - Historical analysis
