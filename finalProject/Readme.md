@@ -23,9 +23,7 @@ The key challenge that this system addresses is the real-time monitoring and det
 
 ### Objective:
 To continuously monitor ice conditions across multiple locations on the Rideau Canal and determine whether it's safe for public skating — using simulated IoT sensors, real-time data streaming, and cloud-based analytics.
-
 ![image](https://github.com/user-attachments/assets/ac5aaf57-477a-4c94-9ed7-7b1a753e9897)
-
 ## Components:
 
 ### 1. IoT Sensor Simulation
