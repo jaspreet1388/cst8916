@@ -100,13 +100,13 @@ For the purpose of implementing the project we need the sensor, IOT Hub and anal
 ## IoT Sensor Simulation
 
 ### Overview:
-Three virtual sensors simulate environmental monitoring devices located at:
+Three virtual sensors to simulate the environmental monitoring devices located at:
 - Dow’s Lake
 - Fifth Avenue
 - NAC
 
 Each sensor:
-- Generates telemetry data every 10 seconds
+- Is generating telemetry data every 10 seconds
 - Sends the data to Azure IoT Hub using the **Azure IoT Device SDK for Python**
 
 ### JSON Payload Format:
@@ -122,7 +122,7 @@ Each sensor:
 
 ```
 ## Scripts Used:
-The script used on the linux to stimulate the data are stored in the sensor-simulation/ directory of the final project, these are  :
+The script used on the linux to stimulate the data are stored in the **sensor-simulation/** directory of the final project, these are  :
 
 - simulate_dowslake.py
 
