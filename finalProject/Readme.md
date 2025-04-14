@@ -135,7 +135,7 @@ The script used on the linux to stimulate the data are stored in the **sensor-si
 - .env file stores device connection strings
 
 ## Azure IoT Hub Configuration:
-### For the purpose readability, the screenshots of IOT hub configuration are included separately under screenshots/IOt_HUB-Configuration.pdf
+### For the purpose readability, the screenshots of the configuration are included separately under screenshots/ folder
 
 Here are the steps of the configuration followed :
 ### Azure IoT Hub Configuration
