@@ -197,7 +197,7 @@ To view:
 ## Azure Stream Analytics Job
 
 Azure Stream Analytics (ASA) is used to process telemetry data from IoT devices in real-time. It ingests data from Azure IoT Hub, applies a custom SQL-like query to evaluate skating conditions, and outputs the results to Azure Blob Storage.
-For the purpose of simplification the screenshots of the azure stream analytics are inlcuded in the directory screenshots/Azure_SA_job.pdf.
+For the purpose of simplification the screenshots of the azure stream analytics are inlcuded in the directory **screenshots/Azure_SA_job.pdf**.
 
 **Here are the steps of the configuration :**
 ---
